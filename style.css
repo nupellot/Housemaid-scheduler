@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+
+body,html {
+  perspective: 3000px;
+  perspective-origin: center em;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("https://cleacom.ru/wp-content/uploads/2017/09/header-slide-1_24-570x410.jpg") cover;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: .2s;
+  transform: 0;
+/*   animation: rotate 10s infinite linear; */
+}
+.wrapper div {
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+/*   border-radius: 20px; */
+}
+.back {
+  background: silver;
+  transform: translateZ(-100px) scale(-1, 1);
+}
+.right {
+  background: green;
+  width: 200px !important;
+  transform: translateX(100px) rotateY(90deg);
+}
+.left {
+  background: lime;
+  width: 200px !important;
+  transform: translateX(-100px) rotateY(90deg) scale(-1, 1);
+}
+.top {
+  background: gold;
+  width: 200px !important;
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(100px);
+}
+.bottom {
+  background: yellow;
+  width: 200px !important;
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(-100px) scale(-1, 1);
+}
+.front {
+  transform: translateZ(100px);
+  background: red;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  height: 50px;
+  width: calc(100%/6);
+  font-size: 20px;
+  font-weight: 900;
+/*   cursor:	nw-resize; */
+}
+body div {
+/*   border: 1px solid red; */
+}
+button {
+  display: none;
+}
+
+
+
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
