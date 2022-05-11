@@ -81,8 +81,25 @@ body div {
 button {
   display: none;
 }
-history-element {
-  transform: translate(330, 3000px);
+.history {
+  position: fixed;
+  padding: 20px;
+  /* border: 4px 0px 0px 0px solid red; */
+  /* border-top: 4px solid linear-gradient(#e66465, #9198e5); */
+  border-bottom: 4px solid pink;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+}
+.history-element {
+  /* transform: translate(330, 3000px); */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border-bottom: 2px inset red;
+  padding: 8px;
 }
 
 
