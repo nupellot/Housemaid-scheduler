@@ -2,7 +2,7 @@ currentdate = new Date();
 
 // alert(getYearWeek(currentdate));
 weekNumber = getYearWeek(currentdate);
-switch (weekNumber % 4) {
+switch (22 % 4) {
   case 0:
     $('.wrapper').css("transform", "");  // Dima N
     break;
