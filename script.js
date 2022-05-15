@@ -67,11 +67,18 @@ function getYearWeek3() {
 
 function getYearWeek4() {
     var today = new Date();
+    alert(Date);
     today.setDate(today.getDate() - 1);
     // d.setDate(d.getDate() + 2);
     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
     const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
-    var result = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+    var daynumber = firstDayOfYear.getDay();
+    // if (daynumber == 0) {
+    //     daynumber = 7;
+    // } else {
+    //   daynumber++;
+    // }
+    var result = Math.ceil((pastDaysOfYear + dayNumber + 1) / 7);
     // alert(result);
     return result;
 }
