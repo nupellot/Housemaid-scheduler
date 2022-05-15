@@ -67,18 +67,19 @@ function getYearWeek3() {
 
 function getYearWeek4() {
     var today = new Date();
-    alert(today);
-    today.setDate(today.getDate() - 1);
+    // alert(today);
+    // today.setDate(today.getDate() + 1);
     // d.setDate(d.getDate() + 2);
     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
-    const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
-    var daynumber = firstDayOfYear.getDay();
-    // if (daynumber == 0) {
-    //     daynumber = 7;
-    // } else {
-    //   daynumber++;
-    // }
-    var result = Math.ceil((pastDaysOfYear + dayNumber + 1) / 7);
+    const pastDaysOfYear = Math.floor((today - firstDayOfYear) / 86400000);
+    // alert(pastDaysOfYear);
+    var dayNumber = firstDayOfYear.getDay();
+    // alert("Jopa1");
+    if (dayNumber == 0) {
+        dayNumber = 6;
+    }
+    // alert("Jopa2");
+    var result = Math.ceil((pastDaysOfYear + dayNumber) / 7);
     // alert(result);
     return result;
 }
