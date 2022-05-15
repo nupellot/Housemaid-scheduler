@@ -67,7 +67,7 @@ function getYearWeek3() {
 
 function getYearWeek4() {
     var today = new Date();
-    alert(Date);
+    alert(today);
     today.setDate(today.getDate() - 1);
     // d.setDate(d.getDate() + 2);
     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
